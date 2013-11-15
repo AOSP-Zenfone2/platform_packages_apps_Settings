@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.broken.util;
+package com.android.settings.slim.util;
 
 import android.app.Activity;
 import android.app.Fragment;

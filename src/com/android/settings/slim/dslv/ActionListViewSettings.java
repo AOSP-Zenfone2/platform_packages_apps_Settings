@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.broken.dslv;
+package com.android.settings.slim.dslv;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -66,9 +66,9 @@ import com.android.internal.util.slim.DeviceUtils.FilteredDeviceFeaturesArray;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
-import com.android.settings.broken.dslv.DragSortListView;
-import com.android.settings.broken.dslv.DragSortController;
-import com.android.settings.broken.util.ShortcutPickerHelper;
+import com.android.settings.slim.dslv.DragSortListView;
+import com.android.settings.slim.dslv.DragSortController;
+import com.android.settings.slim.util.ShortcutPickerHelper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -214,7 +214,7 @@ public class ActionListViewSettings extends ListFragment implements
         mPicker = new ShortcutPickerHelper(mActivity, this);
 
         File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                ".broken" + File.separator + "icons");
+                ".slim" + File.separator + "icons");
 
         mImageTmp = new File(folder.toString()
                 + File.separator + "shortcut.tmp");
@@ -338,7 +338,7 @@ public class ActionListViewSettings extends ListFragment implements
             // Icon is present, save it for future use and add the file path to the action.
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                 File folder = new File(Environment.getExternalStorageDirectory() + File.separator +
-                        ".broken" + File.separator + "icons");
+                        ".slim" + File.separator + "icons");
                 folder.mkdirs();
                 String fileName = folder.toString()
                         + File.separator + "shortcut_" + System.currentTimeMillis() + ".png";
@@ -382,7 +382,7 @@ public class ActionListViewSettings extends ListFragment implements
                 }
                 if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                     File folder = new File(Environment.getExternalStorageDirectory() +
-                            File.separator + ".broken" + File.separator + "icons");
+                            File.separator + ".slim" + File.separator + "icons");
                     folder.mkdirs();
                     File image = new File(folder.toString() + File.separator
                             + "shortcut_" + System.currentTimeMillis() + ".png");

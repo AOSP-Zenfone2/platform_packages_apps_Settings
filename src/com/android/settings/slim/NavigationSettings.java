@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.broken;
+package com.android.settings.slim;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -36,7 +36,7 @@ public class NavigationSettings extends SettingsPreferenceFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.broken_settings_navigation);
+        addPreferencesFromResource(R.xml.slim_navigation_settings);
     }
 
     @Override

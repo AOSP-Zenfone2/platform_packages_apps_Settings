@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.broken.fragments;
+package com.android.settings.slim.fragments;
 
 import android.os.Bundle;
 import android.preference.Preference;
