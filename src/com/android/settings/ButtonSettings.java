@@ -42,13 +42,19 @@ import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+<<<<<<< HEAD
 import com.android.settings.button.ButtonBacklightBrightness;
+=======
+>>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
 
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "SystemSettings";
 
+<<<<<<< HEAD
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
+=======
+>>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
     private static final String KEY_HOME_LONG_PRESS = "hardware_keys_home_long_press";
     private static final String KEY_HOME_DOUBLE_TAP = "hardware_keys_home_double_tap";
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
@@ -125,14 +131,22 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             int defaultLongPressAction = res.getInteger(
                     com.android.internal.R.integer.config_longPressOnHomeBehavior);
             if (defaultLongPressAction < ACTION_NOTHING ||
+<<<<<<< HEAD
                     defaultLongPressAction > ACTION_SLEEP) {
+=======
+                    defaultLongPressAction > ACTION_IN_APP_SEARCH) {
+>>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
                 defaultLongPressAction = ACTION_NOTHING;
             }
 
             int defaultDoubleTapAction = res.getInteger(
                     com.android.internal.R.integer.config_doubleTapOnHomeBehavior);
             if (defaultDoubleTapAction < ACTION_NOTHING ||
+<<<<<<< HEAD
                     defaultDoubleTapAction > ACTION_SLEEP) {
+=======
+                    defaultDoubleTapAction > ACTION_IN_APP_SEARCH) {
+>>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
                 defaultDoubleTapAction = ACTION_NOTHING;
             }
 
@@ -165,12 +179,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         } else {
             prefScreen.removePreference(menuCategory);
         }
+<<<<<<< HEAD
 
         final ButtonBacklightBrightness backlight =
                 (ButtonBacklightBrightness) findPreference(KEY_BUTTON_BACKLIGHT);
         if (!backlight.isButtonSupported()) {
             prefScreen.removePreference(backlight);
         }
+=======
+>>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -216,4 +233,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         return false;
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)

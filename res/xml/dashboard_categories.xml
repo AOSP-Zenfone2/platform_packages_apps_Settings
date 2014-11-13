@@ -108,7 +108,11 @@
                 android:id="@+id/button_settings"
                 android:title="@string/button_pref_title"
                 android:fragment="com.android.settings.ButtonSettings"
+<<<<<<< HEAD
                 android:icon="@drawable/ic_buttons_tile"
+=======
+                android:icon="@drawable/ic_settings_home"
+>>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
                 />
 
         <!-- Application Settings -->
