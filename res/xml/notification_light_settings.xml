@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 
 <!-- Copyright (C) 2016 The Hazy Project
+=======
+<!-- Copyright (C) 2012 The CyanogenMod Project
+>>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -22,8 +26,12 @@
         android:key="general_section"
         android:title="@string/notification_light_general_title">
 
+<<<<<<< HEAD
         <SwitchPreference
         <com.android.settings.hazy.SystemSettingSwitchPreference
+=======
+        <com.android.settings.chroma.SystemSettingSwitchPreference
+>>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
             android:key="notification_light_pulse"
             android:title="@string/notification_light_title" />
 
@@ -33,6 +41,7 @@
             android:persistent="false"
             android:dependency="notification_light_pulse" />
 
+<<<<<<< HEAD
         <SwitchPreference
             android:key="notification_light_screen_on_enable"
             android:title="@string/notification_light_screen_on"
@@ -48,10 +57,14 @@
         <SwitchPreference
         <com.android.settings.preference.SystemSettingSwitchPreference
         <com.android.settings.hazy.SystemSettingSwitchPreference
+=======
+        <com.android.settings.chroma.SystemSettingSwitchPreference
+>>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
             android:key="notification_light_pulse_custom_enable"
             android:title="@string/notification_light_use_custom"
             android:dependency="notification_light_pulse" />
 
+<<<<<<< HEAD
         <!-- Whether to allow notification lights in zen mode -->
         <!-- This is set to true to match the default state in Android 5.1 -->
         <com.android.settings.preference.SystemSettingSwitchPreference
@@ -59,6 +72,8 @@
             android:title="@string/allow_lights_title"
             android:defaultValue="true" />
 
+=======
+>>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
     </PreferenceCategory>
 
     <PreferenceCategory

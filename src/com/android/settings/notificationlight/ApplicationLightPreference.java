@@ -37,6 +37,8 @@ public class ApplicationLightPreference extends DialogPreference {
     private static String TAG = "AppLightPreference";
     public static final int DEFAULT_TIME = 1000;
     public static final int DEFAULT_COLOR = 0xffffff;
+    public static final int DEFAULT_COLOR = 0xeeeeee; //off-White since white does not show in UI
+
 
     private ImageView mLightColorView;
     private TextView mOnValueView;
@@ -60,6 +62,7 @@ public class ApplicationLightPreference extends DialogPreference {
         mOffValue = DEFAULT_TIME;
         mOnOffChangeable = context.getResources().getBoolean(
                 com.android.internal.R.bool.config_ledCanPulse);
+        mOnOffChangeable = true;
         init();
     }
 
@@ -76,6 +79,7 @@ public class ApplicationLightPreference extends DialogPreference {
         mOffValue = offValue;
         mOnOffChangeable = context.getResources().getBoolean(
                 com.android.internal.R.bool.config_ledCanPulse);
+        mOnOffChangeable = true;
         init();
     }
 
@@ -144,12 +148,17 @@ public class ApplicationLightPreference extends DialogPreference {
                     (mColorValue - 0x101010) : mColorValue;
             mLightColorView.setImageDrawable(createRectShape(width, height,
                     0xFF000000 + imageColor));
+            mLightColorView.setImageDrawable(createRectShape(width, height, 0xFF000000 + mColorValue));
         }
         if (mOnValueView != null) {
             mOnValueView.setText(mapLengthValue(mOnValue));
         }
         if (mOffValueView != null) {
+
             if (mOnValue == 1 || !mOnOffChangeable) {
+
+            if (mOnValue == 1) {
+
                 mOffValueView.setVisibility(View.GONE);
             } else {
                 mOffValueView.setVisibility(View.VISIBLE);
@@ -164,6 +173,10 @@ public class ApplicationLightPreference extends DialogPreference {
 
         final LightSettingsDialog d = (LightSettingsDialog) getDialog();
     }
+
+
+
+    @Override
 
     protected Dialog createDialog() {
         final LightSettingsDialog d = new LightSettingsDialog(getContext(),
@@ -226,6 +239,9 @@ public class ApplicationLightPreference extends DialogPreference {
         mColorValue = color;
         mOnValue = onValue;
         mOffValue = offValue;
+
+
+        mOnOffChangeable = true;
         updatePreferenceViews();
     }
 
@@ -259,9 +275,12 @@ public class ApplicationLightPreference extends DialogPreference {
     }
 
     private String mapLengthValue(Integer time) {
+
         if (!mOnOffChangeable) {
             return getContext().getString(R.string.pulse_length_always_on);
         }
+
+
         if (time == DEFAULT_TIME) {
             return getContext().getString(R.string.default_time);
         }

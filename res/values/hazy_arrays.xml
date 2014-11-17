@@ -16,11 +16,11 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     
-
     <!-- Values for the notification light pulse spinners -->
 
     <!-- Notification light -->
 
+    <!-- Values for the notification light pulse spinners -->
     <string-array name="notification_pulse_length_entries" translatable="false">
         <item>@string/pulse_length_always_on</item>
         <item>@string/pulse_length_very_short</item>
