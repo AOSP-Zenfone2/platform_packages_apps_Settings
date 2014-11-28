@@ -111,6 +111,7 @@
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
         <PreferenceScreen
+<<<<<<< HEAD
         android:fragment="com.android.settings.hazy.BatterySettings"
         android:key="battery_style_pref"
         android:title="@string/battery_title"
@@ -130,5 +131,11 @@
         android:entries="@array/status_bar_battery_percentage_entries"
         android:entryValues="@array/status_bar_battery_percentage_values" />   
 
+=======
+        android:fragment="com.android.settings.screwd.BatterySettings"
+        android:key="battery_style_pref"
+        android:title="@string/battery_title"
+        android:summary="@string/battery2_summary" />   
+>>>>>>> 7b27d6e... Battery text mode (2/2)
 
 </PreferenceScreen>

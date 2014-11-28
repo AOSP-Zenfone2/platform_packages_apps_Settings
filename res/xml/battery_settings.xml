@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <!-- Copyright (C) 2016 The Hazy Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +15,8 @@
      limitations under the License.
 -->
 
+=======
+>>>>>>> 7b27d6e... Battery text mode (2/2)
 <PreferenceScreen
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
@@ -32,4 +35,8 @@
         android:entries="@array/status_bar_battery_percentage_entries"
         android:entryValues="@array/status_bar_battery_percentage_values" />
 
+<<<<<<< HEAD
 </PreferenceScreen>
+=======
+</PreferenceScreen>
+>>>>>>> 7b27d6e... Battery text mode (2/2)
