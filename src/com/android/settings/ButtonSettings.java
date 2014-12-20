@@ -43,18 +43,26 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.android.settings.button.ButtonBacklightBrightness;
 =======
 >>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
+=======
+import com.android.settings.button.ButtonBacklightBrightness;
+>>>>>>> 2332256... Forward port button backlight options
 
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "SystemSettings";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
 =======
 >>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
+=======
+    private static final String KEY_BUTTON_BACKLIGHT = "button_backlight";
+>>>>>>> 2332256... Forward port button backlight options
     private static final String KEY_HOME_LONG_PRESS = "hardware_keys_home_long_press";
     private static final String KEY_HOME_DOUBLE_TAP = "hardware_keys_home_double_tap";
     private static final String KEY_MENU_PRESS = "hardware_keys_menu_press";
@@ -180,14 +188,20 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             prefScreen.removePreference(menuCategory);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2332256... Forward port button backlight options
 
         final ButtonBacklightBrightness backlight =
                 (ButtonBacklightBrightness) findPreference(KEY_BUTTON_BACKLIGHT);
         if (!backlight.isButtonSupported()) {
             prefScreen.removePreference(backlight);
         }
+<<<<<<< HEAD
 =======
 >>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
+=======
+>>>>>>> 2332256... Forward port button backlight options
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -234,7 +248,11 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
+=======
+}
+>>>>>>> 2332256... Forward port button backlight options

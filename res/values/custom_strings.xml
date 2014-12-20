@@ -50,6 +50,7 @@
     <string name="backlight_summary_disabled">Disabled</string>
     <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
     <string name="backlight_summary_enabled">Enabled</string>
+<<<<<<< HEAD
  
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers">Layers</string>
@@ -62,4 +63,7 @@
 
 =======
 >>>>>>> e4767d6... Settings : Hardware key rebinding (2/2)
+=======
+
+>>>>>>> 2332256... Forward port button backlight options
 </resources>

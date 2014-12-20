@@ -16,4 +16,8 @@
         <item quantity="one"><xliff:g id="seconds">%d</xliff:g> second</item>
         <item quantity="other"><xliff:g id="seconds">%d</xliff:g> seconds</item>
     </plurals>
+<<<<<<< HEAD
 </resources>
+=======
+</resources>
+>>>>>>> 2332256... Forward port button backlight options
