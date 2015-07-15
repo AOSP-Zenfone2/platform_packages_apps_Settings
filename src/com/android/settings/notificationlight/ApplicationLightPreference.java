@@ -62,7 +62,9 @@ public class ApplicationLightPreference extends DialogPreference {
         mOffValue = DEFAULT_TIME;
         mOnOffChangeable = context.getResources().getBoolean(
                 com.android.internal.R.bool.config_ledCanPulse);
+
         mOnOffChangeable = true;
+
         init();
     }
 
@@ -79,7 +81,9 @@ public class ApplicationLightPreference extends DialogPreference {
         mOffValue = offValue;
         mOnOffChangeable = context.getResources().getBoolean(
                 com.android.internal.R.bool.config_ledCanPulse);
+
         mOnOffChangeable = true;
+
         init();
     }
 
