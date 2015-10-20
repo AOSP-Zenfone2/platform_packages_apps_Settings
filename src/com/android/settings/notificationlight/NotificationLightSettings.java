@@ -30,10 +30,9 @@ import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-<<<<<<< HEAD
+
 import android.preference.SwitchPreference;
-=======
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
@@ -46,7 +45,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.android.internal.logging.MetricsLogger;
-<<<<<<< HEAD
+
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -57,11 +56,11 @@ import com.android.settings.nexus.PackageListAdapter.PackageItem;
 import com.android.settings.preference.SystemSettingSwitchPreference;
 import android.preference.SwitchPreference;
 import com.android.settings.hazy.SystemSettingSwitchPreference;
-=======
+
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.chroma.SystemSettingSwitchPreference;
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
 import com.android.settings.cyanogenmod.PackageListAdapter;
 import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
 
@@ -85,10 +84,9 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private static final String DEFAULT_PREF = "default";
     private static final String MISSED_CALL_PREF = "missed_call";
     private static final String VOICEMAIL_PREF = "voicemail";
-<<<<<<< HEAD
+
     private static final String KEY_ALLOW_LIGHTS = "allow_lights";
-=======
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
     public static final int ACTION_TEST = 0;
     public static final int ACTION_DELETE = 1;
     private static final int MENU_ADD = 0;
@@ -100,12 +98,11 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private int mDefaultLedOff;
     private PackageManager mPackageManager;
     private PreferenceGroup mApplicationPrefList;
-<<<<<<< HEAD
+
     private SwitchPreference mEnabledPref;
     private SwitchPreference mCustomEnabledPref;
     private SwitchPreference mScreenOnLightsPref;
-=======
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
     private SystemSettingSwitchPreference mEnabledPref;
     private SystemSettingSwitchPreference mCustomEnabledPref;
     private ApplicationLightPreference mDefaultPref;
@@ -130,7 +127,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         mMultiColorNotificationLed = resources.getBoolean(
                 com.android.internal.R.bool.config_multiColorNotificationLed);
 
-<<<<<<< HEAD
+
         // Remove of the "Allow notification light" setting if an led is not supported
             if (!getResources().getBoolean(
                     com.android.internal.R.bool.config_intrusiveNotificationLed)) {
@@ -140,20 +137,20 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         // Get the system defined default notification color
         mDefaultColor =
                 resources.getColor(com.android.internal.R.color.config_defaultNotificationColor);
-=======
+
         // Get the system defined default notification color
         mDefaultColor = resources.getColor(com.android.internal.R.color.config_defaultNotificationColor);
         if (mDefaultColor == Color.WHITE) {
             // We cannot properly show white in the UI, change it to off white (#eeeeee)
             mDefaultColor = 0xFFEEEEEE;
         }
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
 
         mDefaultLedOn = resources.getInteger(
                 com.android.internal.R.integer.config_defaultNotificationLedOn);
         mDefaultLedOff = resources.getInteger(
                 com.android.internal.R.integer.config_defaultNotificationLedOff);
-<<<<<<< HEAD
+
         mEnabledPref = (SwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE);
         mEnabledPref.setOnPreferenceChangeListener(this);
@@ -167,20 +164,20 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE);
         mEnabledPref.setOnPreferenceChangeListener(this);
         mCustomEnabledPref = (SwitchPreference)
-=======
+
 
         mEnabledPref = (SystemSettingSwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE);
         mEnabledPref.setOnPreferenceChangeListener(this);
         mCustomEnabledPref = (SystemSettingSwitchPreference)
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE);
         mCustomEnabledPref.setOnPreferenceChangeListener(this);
 
         mDefaultPref = (ApplicationLightPreference) findPreference(DEFAULT_PREF);
         mDefaultPref.setOnPreferenceChangeListener(this);
 
-<<<<<<< HEAD
+
         mScreenOnLightsPref = (SwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_SCREEN_ON);
         mScreenOnLightsPref.setOnPreferenceChangeListener(this);
@@ -192,8 +189,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE);
         mCustomEnabledPref.setOnPreferenceChangeListener(this);
 
-=======
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
         // Missed call and Voicemail preferences should only show on devices with a voice capabilities
         TelephonyManager tm = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
         if (tm.getPhoneType() == TelephonyManager.PHONE_TYPE_NONE) {
@@ -227,11 +223,14 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
 
     @Override
     protected int getMetricsCategory() {
-<<<<<<< HEAD
+
         return MetricsLogger.DISPLAY;
-=======
+
         return MetricsLogger.APPLICATION;
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
+
+        return MetricsLogger.NOTIFICATION_LIGHT_SETTINGS;
+
     }
 
     @Override
@@ -484,12 +483,12 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-<<<<<<< HEAD
+
         if (preference == mEnabledPref || preference == mCustomEnabledPref ||
                 preference == mScreenOnLightsPref) {
-=======
+
         if (preference == mEnabledPref || preference == mCustomEnabledPref) {
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
             getActivity().invalidateOptionsMenu();
         } else {
             ApplicationLightPreference lightPref = (ApplicationLightPreference) preference;
@@ -503,11 +502,11 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         mMenu = menu;
-<<<<<<< HEAD
+
         mMenu.add(0, MENU_ADD, 0, R.string.add)
-=======
+
         mMenu.add(0, MENU_ADD, 0, R.string.profiles_add)
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
                 .setIcon(R.drawable.ic_menu_add_white)
                 .setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
     }
@@ -539,12 +538,11 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
             case DIALOG_APPS:
                 final ListView list = new ListView(getActivity());
                 list.setAdapter(mPackageAdapter);
-<<<<<<< HEAD
+
                 builder.setTitle(R.string.choose_app);
-=======
 
                 builder.setTitle(R.string.profile_choose_app);
->>>>>>> 87ade81... [2/2] Settings: Battery and Notification Lights
+
                 builder.setView(list);
                 dialog = builder.create();
 

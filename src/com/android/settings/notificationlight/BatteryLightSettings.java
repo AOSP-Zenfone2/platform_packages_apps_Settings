@@ -40,6 +40,8 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
     private static final String LOW_COLOR_PREF = "low_color";
     private static final String MEDIUM_COLOR_PREF = "medium_color";
     private static final String FULL_COLOR_PREF = "full_color";
+    private static final String LIGHT_ENABLED_PREF = "battery_light_enabled";
+    private static final String PULSE_ENABLED_PREF = "battery_light_pulse";
 
     private static final String REALLY_FULL_COLOR_PREF = "really_full_color";
     private static final String LIGHT_ENABLED_PREF = "battery_light_enabled";
@@ -56,6 +58,11 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mPulseEnabledPref;
 
 
+
+    private SwitchPreference mLightEnabledPref;
+    private SwitchPreference mPulseEnabledPref;
+
+
     private static final int MENU_RESET = Menu.FIRST;
 
     @Override
@@ -67,6 +74,9 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
 
         mLightEnabledPref = (SwitchPreference) prefSet.findPreference(LIGHT_ENABLED_PREF);
         mPulseEnabledPref = (SwitchPreference) prefSet.findPreference(PULSE_ENABLED_PREF);
+
+
+
 
 
         // Does the Device support changing battery LED colors?
@@ -96,9 +106,12 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
     @Override
     protected int getMetricsCategory() {
 
+
         return MetricsLogger.DISPLAY;
 
         return MetricsLogger.APPLICATION;
+
+        return MetricsLogger.BATTERY_LIGHT_SETTINGS;
 
     }
 
@@ -179,9 +192,13 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
         switch (item.getItemId()) {
             case MENU_RESET:
 
+
                 resetToDefaults();
 
                 resetColors();
+
+
+                resetToDefaults();
 
                 return true;
         }
@@ -217,8 +234,10 @@ public class BatteryLightSettings extends SettingsPreferenceFragment implements
     }
 
 
+
         refreshDefault();
     }
+
 
 
     @Override
