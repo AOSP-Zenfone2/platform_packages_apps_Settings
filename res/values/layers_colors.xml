@@ -19,5 +19,6 @@
     <drawable name="expanded_item_bg_activated">@color/card_background</drawable>
     <!-- Original color: @android:color/background_light -->
     <drawable name="expanded_item_bg">@color/card_background</drawable>
+    <color name="storage_summary_title_color">#ff607d8b</color>
 
 </resources>
