@@ -71,6 +71,7 @@
     <string name="allow_lights_title">Lights in do not disturb mode</string>
     <string name="notification_light_screen_on">Lights with screen on</string>
 
+
     <!-- Profiles -->
     <string name="profile_reset_title">Reset</string>
     <string name="profiles_add">Add</string>
