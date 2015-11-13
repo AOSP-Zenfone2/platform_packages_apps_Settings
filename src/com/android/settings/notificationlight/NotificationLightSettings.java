@@ -85,6 +85,10 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private static final String MISSED_CALL_PREF = "missed_call";
     private static final String VOICEMAIL_PREF = "voicemail";
 
+
+    private static final String KEY_ALLOW_LIGHTS = "allow_lights";
+
+
     private static final String KEY_ALLOW_LIGHTS = "allow_lights";
 
     public static final int ACTION_TEST = 0;
