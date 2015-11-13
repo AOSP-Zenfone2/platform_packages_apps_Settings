@@ -107,8 +107,10 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private SwitchPreference mCustomEnabledPref;
     private SwitchPreference mScreenOnLightsPref;
 
+
     private SystemSettingSwitchPreference mEnabledPref;
     private SystemSettingSwitchPreference mCustomEnabledPref;
+
     private ApplicationLightPreference mDefaultPref;
     private ApplicationLightPreference mCallPref;
     private ApplicationLightPreference mVoicemailPref;
@@ -160,6 +162,7 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         mEnabledPref.setOnPreferenceChangeListener(this);
 
 
+
         mCustomEnabledPref = (SwitchPreference)
         mEnabledPref = (SystemSettingSwitchPreference)
 
@@ -178,21 +181,25 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE);
         mCustomEnabledPref.setOnPreferenceChangeListener(this);
 
+
+
         mDefaultPref = (ApplicationLightPreference) findPreference(DEFAULT_PREF);
         mDefaultPref.setOnPreferenceChangeListener(this);
+
 
 
         mScreenOnLightsPref = (SwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_SCREEN_ON);
         mScreenOnLightsPref.setOnPreferenceChangeListener(this);
         mCustomEnabledPref = (SwitchPreference)
+
+
         mScreenOnLightsPref = (SystemSettingSwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_SCREEN_ON);
         mScreenOnLightsPref.setOnPreferenceChangeListener(this);
         mCustomEnabledPref = (SystemSettingSwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE);
         mCustomEnabledPref.setOnPreferenceChangeListener(this);
-
 
         // Missed call and Voicemail preferences should only show on devices with a voice capabilities
         TelephonyManager tm = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
@@ -488,10 +495,15 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
 
+
         if (preference == mEnabledPref || preference == mCustomEnabledPref ||
                 preference == mScreenOnLightsPref) {
 
         if (preference == mEnabledPref || preference == mCustomEnabledPref) {
+
+
+        if (preference == mEnabledPref || preference == mCustomEnabledPref ||
+                preference == mScreenOnLightsPref) {
 
             getActivity().invalidateOptionsMenu();
         } else {
