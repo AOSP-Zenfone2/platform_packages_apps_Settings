@@ -39,6 +39,11 @@
    <!--<item name="android:colorAccent">#HEX</item>-->
    </style>
 
+
+   <!-- Unlink this dialog from framework -->
+   <style name="Theme.Material.Light.Dialog.NoActionBar" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar" />
+
+
    <!-- Unlink this dialog from framework -->
    <style name="Theme.Material.Light.Dialog.NoActionBar" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar" />
 
