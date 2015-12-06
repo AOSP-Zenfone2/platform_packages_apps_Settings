@@ -25,6 +25,7 @@ import com.android.settings.search.Indexable;
 import static android.provider.Settings.Secure.CAMERA_DOUBLE_TAP_POWER_GESTURE_DISABLED;
 import static android.provider.Settings.Secure.CAMERA_GESTURE_DISABLED;
 import static android.provider.Settings.Secure.DOUBLE_TAP_TO_WAKE;
+import static android.provider.Settings.System.DOUBLE_TAP_SLEEP_GESTURE;
 import static android.provider.Settings.Secure.DOZE_ENABLED;
 import static android.provider.Settings.Secure.WAKE_GESTURE_ENABLED;
 import static android.provider.Settings.System.SCREEN_BRIGHTNESS_MODE;
@@ -131,7 +132,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mFontSizePref.setOnPreferenceClickListener(this);
 
 
+
         mTapToSleepPreference = (SwitchPreference) findPreference(DOUBLE_TAP_SLEEP_GESTURE);
+
+
+        mTapToSleepPreference = (SwitchPreference) findPreference(KEY_TAP_TO_SLEEP);
 
 
         if (isAutomaticBrightnessAvailable(getResources())) {
