@@ -97,17 +97,6 @@
                 android:icon="@drawable/ic_settings_display"
                 />
 
-	<!-- Layers -->
-        <dashboard-tile
-                android:id="@+id/bitsyko_layers"
-                android:icon="@drawable/ic_bitsyko_layers"
-                android:title="@string/bitsyko_layers">     
-		<intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.lovejoy777.rroandlayersmanager"
-                android:targetClass="com.lovejoy777.rroandlayersmanager.menu"
-                />
-
         <!-- Notifications -->
         <dashboard-tile
                 android:id="@+id/notification_settings"
@@ -279,6 +268,28 @@
                     android:action="android.intent.action.MAIN"
                     android:targetPackage="eu.chainfire.supersu"
                     android:targetClass="eu.chainfire.supersu.MainActivity" />
+        </dashboard-tile>
+
+         <!-- Layers -->
+         <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">     
+		    <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
+        </dashboard-tile>
+
+        <!-- Kernel Auditor App -->
+        <dashboard-tile
+                android:id="@+id/kernel_auditor"
+                android:icon="@drawable/ic_settings_performance"
+                android:title="@string/performance_settings">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.grarak.kerneladiutor"
+                    android:targetClass="com.grarak.kerneladiutor.MainActivity" />
         </dashboard-tile>
 
         <!-- About Device -->
