@@ -71,6 +71,7 @@ import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.fuelgauge.InactiveApps;
@@ -1172,6 +1173,21 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         }
     }
 
+<<<<<<< HEAD
+=======
+    private void updateColorTemperature() {
+        updateSwitchPreference(mColorTemperaturePreference,
+                SystemProperties.getBoolean(COLOR_TEMPERATURE_PROPERTY, false));
+    }
+
+    private void writeColorTemperature() {
+        SystemProperties.set(COLOR_TEMPERATURE_PROPERTY,
+                mColorTemperaturePreference.isChecked() ? "1" : "0");
+        pokeSystemProperties();
+        Toast.makeText(getActivity(), R.string.color_temperature_toast, Toast.LENGTH_LONG).show();
+    }
+
+>>>>>>> 2334d35... Added toast message to color temperature setting
     private void updateUSBAudioOptions() {
         updateSwitchPreference(mUSBAudio, Settings.Secure.getInt(getContentResolver(),
                 Settings.Secure.USB_AUDIO_AUTOMATIC_ROUTING_DISABLED, 0) != 0);
