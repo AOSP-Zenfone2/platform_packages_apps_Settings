@@ -418,6 +418,9 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mTapToSleepPreference.setChecked(Settings.System.getInt(getContentResolver(),
                 Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0) == 1);
             mTapToSleepPreference.setOnPreferenceChangeListener(this);
+            int value = Settings.System.getInt(getContentResolver(), DOUBLE_TAP_SLEEP_GESTURE, 0);
+            mTapToSleepPreference.setChecked(value != 0);
+
         }
 
 
@@ -488,6 +491,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), DOUBLE_TAP_TO_WAKE, value ? 1 : 0);
         }
+
+        if (preference == mTapToSleepPreference) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(), DOUBLE_TAP_SLEEP_GESTURE, value ? 1 : 0);
+        }
+
         if (preference == mCameraGesturePreference) {
             boolean value = (Boolean) objValue;
             Settings.Secure.putInt(getContentResolver(), CAMERA_GESTURE_DISABLED,
