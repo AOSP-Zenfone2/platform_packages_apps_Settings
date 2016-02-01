@@ -52,6 +52,7 @@ import com.android.settings.nexus.PackageListAdapter;
 import com.android.settings.nexus.PackageListAdapter.PackageItem;
 import com.android.settings.preference.SystemSettingSwitchPreference;
 import android.preference.SwitchPreference;
+import com.android.settings.hazy.SystemSettingSwitchPreference;
 import com.android.settings.cyanogenmod.PackageListAdapter;
 import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
 
