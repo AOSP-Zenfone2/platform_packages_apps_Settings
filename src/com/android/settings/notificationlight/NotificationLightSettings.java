@@ -51,6 +51,9 @@ import com.android.settings.hazy.PackageListAdapter.PackageItem;
 import com.android.settings.nexus.PackageListAdapter;
 import com.android.settings.nexus.PackageListAdapter.PackageItem;
 import com.android.settings.preference.SystemSettingSwitchPreference;
+import android.preference.SwitchPreference;
+import com.android.settings.cyanogenmod.PackageListAdapter;
+import com.android.settings.cyanogenmod.PackageListAdapter.PackageItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -129,11 +132,15 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE);
         mEnabledPref.setOnPreferenceChangeListener(this);
 
+
         mCustomEnabledPref = (SwitchPreference)
         mEnabledPref = (SystemSettingSwitchPreference)
+
+        mEnabledPref = (SwitchPreference)
+
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE);
         mEnabledPref.setOnPreferenceChangeListener(this);
-        mCustomEnabledPref = (SystemSettingSwitchPreference)
+        mCustomEnabledPref = (SwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE);
         mCustomEnabledPref.setOnPreferenceChangeListener(this);
 
