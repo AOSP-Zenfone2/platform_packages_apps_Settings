@@ -91,6 +91,13 @@
                 android:summary="@string/tap_to_wake_summary"
                 android:persistent="false" />
 
+        <!-- Double tap to sleep -->
+        <SwitchPreference
+                android:key="double_tap_sleep_gesture"
+                android:title="@string/double_tap_to_sleep_title"
+                android:summary="@string/double_tap_to_sleep_summary"
+                android:defaultValue="true" />
+
         <com.android.settings.WarnedListPreference
                 android:key="font_size"
                 android:title="@string/title_font_size"
@@ -111,7 +118,7 @@
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
         <PreferenceScreen
-<<<<<<< HEAD
+
         android:fragment="com.android.settings.hazy.BatterySettings"
         android:key="battery_style_pref"
         android:title="@string/battery_title"
@@ -131,11 +138,11 @@
         android:entries="@array/status_bar_battery_percentage_entries"
         android:entryValues="@array/status_bar_battery_percentage_values" />   
 
-=======
+
         android:fragment="com.android.settings.screwd.BatterySettings"
         android:key="battery_style_pref"
         android:title="@string/battery_title"
         android:summary="@string/battery2_summary" />   
->>>>>>> 7b27d6e... Battery text mode (2/2)
+
 
 </PreferenceScreen>
