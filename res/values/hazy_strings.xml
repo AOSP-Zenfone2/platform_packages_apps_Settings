@@ -18,6 +18,8 @@
 
     <string name="statusbar">Statusbar</string>
 
+
+
     <!-- Hazy version -->
     <string name="hazy_version">Hazy version</string>
     <string name="hazy_version_default">Unknown</string>
