@@ -49,7 +49,7 @@ public class BatterySettings extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.battery_settings);
+        addPreferencesFromResource(R.xml.display_settings);
 
         ContentResolver resolver = getActivity().getContentResolver();
 
