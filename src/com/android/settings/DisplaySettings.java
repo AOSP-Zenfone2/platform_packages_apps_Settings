@@ -74,6 +74,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOZE = "doze";
     private static final String KEY_TAP_TO_WAKE = "tap_to_wake";
     private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
+    private static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
+	private static final String KEY_AUTO_BRIGHTNESS = "auto_brightness";
     private static final String KEY_AUTO_ROTATE = "auto_rotate";
     private static final String KEY_NIGHT_MODE = "night_mode";
     private static final String KEY_CAMERA_GESTURE = "camera_gesture";
@@ -127,6 +129,10 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mFontSizePref = (WarnedListPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
         mFontSizePref.setOnPreferenceClickListener(this);
+
+
+        mTapToSleepPreference = (SwitchPreference) findPreference(DOUBLE_TAP_SLEEP_GESTURE);
+
 
         if (isAutomaticBrightnessAvailable(getResources())) {
             mAutoBrightnessPreference = (SwitchPreference) findPreference(KEY_AUTO_BRIGHTNESS);
@@ -404,6 +410,16 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             int value = Settings.Secure.getInt(getContentResolver(), DOUBLE_TAP_TO_WAKE, 0);
             mTapToWakePreference.setChecked(value != 0);
         }
+
+
+
+        // Update tap to sleep.
+        if (mTapToSleepPreference != null) {
+            mTapToSleepPreference.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0) == 1);
+            mTapToSleepPreference.setOnPreferenceChangeListener(this);
+        }
+
 
         // Update camera gesture #1 if it is available.
         if (mCameraGesturePreference != null) {
