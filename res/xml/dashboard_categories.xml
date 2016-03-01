@@ -202,7 +202,11 @@
                 android:icon="@drawable/ic_settings_google"
                 />
 
+
              <!-- Google Settings -->
+
+        <!-- Google Settings -->
+
         <dashboard-tile
             android:id="@+id/google_settings"
             android:icon="@drawable/ic_settings_google"

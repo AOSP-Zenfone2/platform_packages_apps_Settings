@@ -48,6 +48,9 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.hazy.PackageListAdapter;
 import com.android.settings.hazy.PackageListAdapter.PackageItem;
+import com.android.settings.nexus.PackageListAdapter;
+import com.android.settings.nexus.PackageListAdapter.PackageItem;
+import com.android.settings.preference.SystemSettingSwitchPreference;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -84,6 +87,8 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
     private SwitchPreference mEnabledPref;
     private SwitchPreference mCustomEnabledPref;
     private SwitchPreference mScreenOnLightsPref;
+    private SystemSettingSwitchPreference mEnabledPref;
+    private SystemSettingSwitchPreference mCustomEnabledPref;
     private ApplicationLightPreference mDefaultPref;
     private ApplicationLightPreference mCallPref;
     private ApplicationLightPreference mVoicemailPref;
@@ -123,6 +128,14 @@ public class NotificationLightSettings extends SettingsPreferenceFragment implem
         mEnabledPref = (SwitchPreference)
                 findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE);
         mEnabledPref.setOnPreferenceChangeListener(this);
+
+        mCustomEnabledPref = (SwitchPreference)
+        mEnabledPref = (SystemSettingSwitchPreference)
+                findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE);
+        mEnabledPref.setOnPreferenceChangeListener(this);
+        mCustomEnabledPref = (SystemSettingSwitchPreference)
+                findPreference(Settings.System.NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE);
+        mCustomEnabledPref.setOnPreferenceChangeListener(this);
 
         mDefaultPref = (ApplicationLightPreference) findPreference(DEFAULT_PREF);
         mDefaultPref.setOnPreferenceChangeListener(this);
