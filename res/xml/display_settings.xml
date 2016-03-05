@@ -102,7 +102,6 @@
                 android:summary="@string/double_tap_to_sleep_summary"
                 android:defaultValue="true" />
 
-
         <com.android.settings.WarnedListPreference
 
                 <com.android.settings.WarnedListPreference
