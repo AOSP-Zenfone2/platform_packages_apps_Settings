@@ -72,16 +72,8 @@
 
     </dashboard-category>
 
-	<!-- Layers -->
-        <dashboard-tile
-                android:id="@+id/bitsyko_layers"
-                android:icon="@drawable/ic_bitsyko_layers"
-                android:title="@string/bitsyko_layers">     
-		<intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.lovejoy777.rroandlayersmanager"
-                android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
-        </dashboard-tile>
+
+      
 
     <!-- DEVICE -->
     <dashboard-category
@@ -103,6 +95,17 @@
                 android:title="@string/display_settings"
                 android:fragment="com.android.settings.DisplaySettings"
                 android:icon="@drawable/ic_settings_display"
+                />
+
+	<!-- Layers -->
+        <dashboard-tile
+                android:id="@+id/bitsyko_layers"
+                android:icon="@drawable/ic_bitsyko_layers"
+                android:title="@string/bitsyko_layers">     
+		<intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.lovejoy777.rroandlayersmanager"
+                android:targetClass="com.lovejoy777.rroandlayersmanager.menu"
                 />
 
         <!-- Notifications -->
