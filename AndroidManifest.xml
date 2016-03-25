@@ -1816,11 +1816,7 @@
                   android:excludeFromRecents="true"
                   android:exported="true"
                   android:permission="android.permission.MANAGE_USB"
-<<<<<<< HEAD
                   android:theme="@*android:style/Theme.Material.DayNight.Dialog.Alert">
-=======
-                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
->>>>>>> 382c740... UsbModeChooserActivity - Theming update
         </activity>
 
         <activity android:name=".bluetooth.RequestPermissionHelperActivity"
