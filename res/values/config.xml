@@ -19,8 +19,6 @@
     <!-- If false, MIN is displayed. If true, MSID is displayed. -->
     <bool name="config_msid_enable" translatable="false">false</bool>
 
-    <string name="additional_system_update" translatable="false"></string>
-    <string name="additional_system_update_menu" translatable="false"></string>
 
     <!-- TODO: This is purely enforced by the interface, and does not affect what
          strings may be inserted into the actual content provider.
@@ -33,7 +31,7 @@
     <integer name="dashboard_num_columns">1</integer>
 
     <!-- Carrier_enabled editable -->
-    <bool name="config_allow_edit_carrier_enabled" translatable="false">false</bool>
+    <bool name="config_allow_edit_carrier_enabled" translatable="false">true</bool>
 
     <!-- The duration (in milliseconds) of activity transitions -->
     <integer name="setup_wizard_transition_duration">300</integer>
@@ -46,5 +44,9 @@
 
     <!-- DDS Switch setting -->
     <bool name="config_dds_switch_alert_dialog_supported" translatable="false">false</bool>
+
+    <!-- When true enable color temperature setting. -->
+    <bool name="config_enableColorTemperature">true</bool>
+
 
 </resources>
