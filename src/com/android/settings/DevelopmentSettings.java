@@ -1173,8 +1173,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         }
     }
 
-<<<<<<< HEAD
-=======
+
     private void updateColorTemperature() {
         updateSwitchPreference(mColorTemperaturePreference,
                 SystemProperties.getBoolean(COLOR_TEMPERATURE_PROPERTY, false));
@@ -1187,7 +1186,6 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         Toast.makeText(getActivity(), R.string.color_temperature_toast, Toast.LENGTH_LONG).show();
     }
 
->>>>>>> 2334d35... Added toast message to color temperature setting
     private void updateUSBAudioOptions() {
         updateSwitchPreference(mUSBAudio, Settings.Secure.getInt(getContentResolver(),
                 Settings.Secure.USB_AUDIO_AUTOMATIC_ROUTING_DISABLED, 0) != 0);

@@ -7064,8 +7064,6 @@
 
     <!-- Description of feature to change color setting for the display [CHAR LIMIT=NONE] -->
     <string name="picture_color_mode_desc">Use sRGB</string>
-<<<<<<< HEAD
-=======
 
     <!-- Name of the setting to change the display's color temperature -->
     <string name="color_temperature">Cool color temperature</string>
@@ -7075,5 +7073,4 @@
 
     <!-- Toast message letting the user know the color temperature setting is not immediate -->
     <string name="color_temperature_toast">To apply color change, turn off screen</string>
->>>>>>> 2334d35... Added toast message to color temperature setting
 </resources>
