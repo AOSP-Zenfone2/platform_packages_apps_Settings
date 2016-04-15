@@ -73,8 +73,6 @@
     </dashboard-category>
 
 
-
-
     <!-- DEVICE -->
     <dashboard-category
             android:id="@+id/device_section"
