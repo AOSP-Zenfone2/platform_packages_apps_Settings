@@ -115,7 +115,7 @@
         <dashboard-tile
                 android:id="@+id/navigation_settings"
                 android:icon="@drawable/ic_settings_navigation"
-                android:fragment="com.android.settings.broken.NavbarSettings"
+                android:fragment="com.android.settings.broken.NavigationSettings"
                 android:title="@string/navigation_settings_title"
                 />
 
