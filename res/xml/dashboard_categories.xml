@@ -72,15 +72,8 @@
 
     </dashboard-category>
 
-        <!-- Navigation -->
-        <dashboard-tile
-                android:id="@+id/navigation_settings"
-                android:icon="@drawable/ic_settings_navigation"
-                android:fragment="com.android.settings.slim.NavigationSettings"
-                android:title="@string/navigation_settings_title"
-                />
 
-    </dashboard-category>
+
 
     <!-- DEVICE -->
     <dashboard-category
@@ -118,6 +111,14 @@
                 android:title="@string/button_pref_title"
                 android:fragment="com.android.settings.ButtonSettings"
                 android:icon="@drawable/ic_buttons_tile"
+                />
+        
+        <!-- Navigation -->
+        <dashboard-tile
+                android:id="@+id/navigation_settings"
+                android:icon="@drawable/ic_settings_navigation"
+                android:fragment="com.android.settings.slim.NavigationSettings"
+                android:title="@string/navigation_settings_title"
                 />
 
         <!-- Application Settings -->
